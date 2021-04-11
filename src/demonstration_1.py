@@ -23,4 +23,21 @@ class TreeNode:
 
 def inorder_traversal(root):
     # Your code here
+    # leftcurrright
+    if root is None:
+        return []
+    res=[]
+    def helper(node):
+        if node.left:
+            helper(node.left)
+        res.append(node.val)
+        
+        if node.right:
+            helper(node.right)
+    helper(root)
+    return res
+ 
+
+
+    
 
